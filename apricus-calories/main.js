@@ -1,16 +1,4 @@
 var k = 0;
-function mtClearValue() {
-    document.getElementById("mt-age").value = "";
-    document.getElementById("mt-cm").value = "";
-    document.getElementById("mt-lb").value = "";
-}
-
-function usClearValue() {
-    document.getElementById("us-age").value = "";
-    document.getElementById("us-ft").value = "";
-    document.getElementById("us-in").value = "";
-    document.getElementById("us-kg").value = "";
-}
 
 function toggleSystem() {
     if (k === 0) {
@@ -19,6 +7,9 @@ function toggleSystem() {
         $(".button").text("Change to US Units")
         usClearValue()
         document.getElementById("us-man").checked = true;
+        document.getElementById("mt-age").value = "";
+        document.getElementById("mt-cm").value = "";
+        document.getElementById("mt-lb").value = "";
         k++
     } else if (k === 1) {
         $(".metric-type").hide();
@@ -26,6 +17,10 @@ function toggleSystem() {
         $(".button").text("Change to Metric Units")
         mtClearValue()
         document.getElementById("mt-man").checked = true;
+        document.getElementById("us-age").value = "";
+        document.getElementById("us-ft").value = "";
+        document.getElementById("us-in").value = "";
+        document.getElementById("us-kg").value = "";
         k--
     } else {
         console.log("error! k must be atleast 0 or 1. please report this bug.")
@@ -70,7 +65,7 @@ function metricCalculate() {
         console.log("error! mtActivity value does not exist. please report this bug.");
         return false;
     }
-    $("#results h1").text(`We recomend ${mttotalCalories} calories per day to keep your current weight.`)
+    $("#results h1").text(`We recomend ${mttotalCalories.toLocaleString()} calories per day to keep your current weight.`)
     $("#results").slideDown()
     if (mttotalCalories < 1500) {
         $("#results #note").show()

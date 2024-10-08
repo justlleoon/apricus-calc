@@ -83,3 +83,7 @@ a:hover{
     user-select: none;
     text-decoration: none;
 }
+
+#age{
+    width: 25%;
+}

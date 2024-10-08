@@ -95,6 +95,7 @@ function changeSystem() {
         document.getElementById("in").value = "";
         document.getElementById("cm").required = true;
         document.getElementById("cm").value = "";
+        document
         $("span#imsep").hide()
     } else {
         document.getElementById("cm").required = false;

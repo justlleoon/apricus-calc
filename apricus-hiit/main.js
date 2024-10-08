@@ -1,18 +1,18 @@
 function changeSystem() {
     var selectElement = document.getElementById("scale").value;
     if (selectElement === "one") {
-        $("#kg").show()
-        $("#lb").hide()
-        document.getElementById("kg").required = true;
-        document.getElementById("lb").required = false;
-        document.getElementById("lb").value = "";
-        document.getElementById("kg").value = "";
-        $("#div-weight p").text("Your Weight (lb)")
-    } else if (selectElement === "two") {
         $("#lb").show()
         $("#kg").hide()
         document.getElementById("lb").required = true;
         document.getElementById("kg").required = false;
+        document.getElementById("lb").value = "";
+        document.getElementById("kg").value = "";
+        $("#div-weight p").text("Your Weight (lb)")
+    } else if (selectElement === "two") {
+        $("#kg").show()
+        $("#lb").hide()
+        document.getElementById("kg").required = true;
+        document.getElementById("lb").required = false;
         document.getElementById("lb").value = "";
         document.getElementById("kg").value = "";
         $("#div-weight p").text("Your Weight (kg)")

@@ -15,7 +15,7 @@
         <meta name="robots" content="noindex">
     </head>
     <body>
-      <h1>Daily Calorie Requirement Calculator</h1>
+      <h1>Daily Calorie Requirement</h1>
       <button class="button" onclick="toggleSystem()">Change to Metric Units</button>
       <div class="us-type">
         <form onsubmit="return usCalculate()">
@@ -81,7 +81,14 @@
         <h1></h1>
         <p id="note"><i>(Your reccomended intake of calories is below the reccomended level of 1500. Please consult with a doctor if you decide to choose the reccomended calorie intake.)</i></p>
         <br>
-        <p>If you're pregnant or breast-feeding, are a competitive athlete, or have a metabolic disease, such as diabetes, the calorie calculator may overestimate or underestimate your actual calorie needs.</p>
+        <div>
+            <p>The calorie calculator may overestimate or underestimate your actual calorie needs if you're:</p>
+            <ul>
+                <li>Pregnant or breast-feeding</li>
+                <li>A competitive athlete</li>
+                <li>Have a metabolic disease, such as diabetes</li>
+            </ul>
+        </div>
         <button class="clear" onclick="$('#results').slideUp()">Clear</button>
       </div>
     </body>
