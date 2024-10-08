@@ -23,10 +23,10 @@ function calculateBMI() {
         $("#results p").html("Your BMI is considered <b>overweight</b>. Start exercising regularly and have a managed diet.")
     } else if (bmi >= 29.9 && bmi < 34.9){
         document.getElementById("results").style.backgroundColor = "red";
-        $("#results p").html("Your BMI is considered <b>obese ( class I )</b> It's very important to start exercising more often and have a managed diet. Doing so can reduce chances of diseases.")
+        $("#results p").html("Your BMI is considered <b>obese ( class I )</b> Start exercising more often and have a managed diet. Doing so can reduce chances of diseases.")
     } else if (bmi >= 34.9 && bmi < 39.9){
         document.getElementById("results").style.backgroundColor = "red";
-        $("#results p").html("Your BMI is considered <b>obese ( class II )</b> It's very important to start exercising more often and have a managed diet. Doing so can reduce chances of diseases.")
+        $("#results p").html("Your BMI is considered <b>obese ( class II )</b> Start exercising more often and have a managed diet. Doing so can reduce chances of diseases.")
     } else {
         document.getElementById("results").style.backgroundColor = "red";
         $("#results p").html("Your BMI is considered <b>obese ( class III )</b> It's very important to start exercising more often and have a managed diet. Doing so can reduce chances of diseases.")
