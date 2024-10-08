@@ -5,7 +5,6 @@ function toggleSystem() {
         $(".metric-type").show();
         $(".us-type").hide();
         $(".button").text("Change to US Units")
-        usClearValue()
         document.getElementById("us-man").checked = true;
         document.getElementById("mt-age").value = "";
         document.getElementById("mt-cm").value = "";
@@ -15,7 +14,6 @@ function toggleSystem() {
         $(".metric-type").hide();
         $(".us-type").show();
         $(".button").text("Change to Metric Units")
-        mtClearValue()
         document.getElementById("mt-man").checked = true;
         document.getElementById("us-age").value = "";
         document.getElementById("us-ft").value = "";
