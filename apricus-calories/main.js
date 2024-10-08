@@ -6,19 +6,12 @@ function toggleSystem() {
         $(".us-type").hide();
         $(".button").text("Change to US Units")
         document.getElementById("us-man").checked = true;
-        document.getElementById("mt-age").setAttribute("value", "");
-        document.getElementById("mt-cm").setAttribute("value", "");
-        document.getElementById("mt-lb").setAttribute("value", "");
         k++
     } else if (k === 1) {
         $(".metric-type").hide();
         $(".us-type").show();
         $(".button").text("Change to Metric Units")
         document.getElementById("mt-man").checked = true;
-        document.getElementById("us-age").setAttribute("value", "");
-        document.getElementById("us-ft").setAttribute("value", "");
-        document.getElementById("us-in").setAttribute("value", "");
-        document.getElementById("us-kg").setAttribute("value", "");
         k--
     } else {
         console.log("error! k must be atleast 0 or 1. please report this bug.")
