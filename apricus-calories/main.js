@@ -109,7 +109,7 @@ function usCalculate() {
         console.log("error! usActivity value does not exist. please report this bug.");
         return false;
     }
-    $("#results h1").text(`We recomend ${ustotalCalories} calories per day to keep your current weight.`)
+    $("#results h1").text(`We recomend ${ustotalCalories.toLocaleString()} calories per day to keep your current weight.`)
     $("#results").slideDown()
     if (ustotalCalories < 1500) {
         $("#results #note").show()
