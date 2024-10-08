@@ -32,6 +32,25 @@ img{
     text-decoration: none;
 }
 
+.clear{
+    margin: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: rgb(221, 167, 29);
+    color: rgba(174, 54, 14, 1);
+    font-family: Nobile, sans-serif;
+    border: rgba(174, 54, 14, 0.6), 1px, solid;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    display: block;
+    width: fit-content;
+    margin: auto;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-decoration: none;
+}
+
 p{
     margin-bottom: 1px;
 }
