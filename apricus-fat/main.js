@@ -79,27 +79,27 @@ function calculate() {
     if (bf > 25 && male === true || bf > 32 && female === true) {
         //document.getElementById("results").style.backgroundColor = "red";
         $("#results").css("background-color", "red");
-        $("#results p").html("Your body fat is considered <b>obese</b>.");
+        $("#results p").html("It's considered within the <b>obese</b> range.");
     } else if (bf > 18 && male === true || bf > 25 && female === true) {
         //document.getElementById("#results").style.backgroundColor = "yellow";
         $("#results").css("background-color", "#008000");
-        $("#results p").html("Your body fat is considered <b>average</b>.");
+        $("#results p").html("It's considered within the <b>average</b> range..");
     } else if (bf > 14 && male === true || bf > 21 && female === true) {
         //document.getElementById("#results").style.backgroundColor = "#03C03C";
         $("#results").css("background-color", "#03C03C");
-        $("#results p").html("Your body fat is considered <b>fitness</b> level.");
+        $("#results p").html("It's considered within the <b>fitness</b> range.");
     } else if (bf > 6 && male === true || bf > 14 && female === true) {
         //document.getElementById("#results").style.backgroundColor = "#50C878";
         $("#results").css("background-color", "#50C878");
-        $("#results p").html("Your body fat is considered <b>athlete</b> level.");
+        $("#results p").html("It's considered within the <b>athlete</b> range.");
     } else if (bf > 2 && male === true || bf > 10 && female === true) {
         //document.getElementById("#results").style.backgroundColor = "#318CE7";
         $("#results").css("background-color", "#318CE7");
-        $("#results p").html("Your body fat is considered to have an <b>essential</b> amount of fats.");
+        $("#results p").html("It's considered within the <b>less than average</b> range.");
     } else {
         //document.getElementById("#results").style.backgroundColor = "#00DDFF";
         $("#results").css("background-color", "#00DDFF")
-        $("#results p").html("Your body fat is considered to have <b>less than essential</b> amounts of fats.")
+        $("#results p").html("It's considered within the <b>abnormally less than average</b> range.")
     }
     $("#results h1").text(`Your body fat is ${bf}%.`);
     $("#results").slideDown();
