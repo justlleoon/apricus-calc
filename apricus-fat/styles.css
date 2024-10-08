@@ -56,3 +56,15 @@ p{
     margin-left: 5px;
     margin-right: 5px;
 }
+
+a{
+    color: rgba(255, 255, 255, 0.85);
+    text-underline-offset: .3rem;
+    text-decoration-thickness: .1rem;
+    transition: text-decoration-thickness ease .1s;
+}
+
+a:hover{
+    color: rgb(255, 255, 255);
+    text-decoration-thickness: .2rem;
+}
