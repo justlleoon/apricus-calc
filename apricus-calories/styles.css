@@ -1,8 +1,7 @@
 body{
     text-align: center;
-    font-family: "Nobile", sans-serif; 
-    background: linear-gradient(180deg, rgba(240, 244, 236, 1), rgba(241, 235, 226, 1) 100%); 
-    background-color: rgba(241, 235, 226, 1); background-repeat: no-repeat;
+    font-family: "Nobile", sans-serif;
+    background-color: rgb(253, 251, 247);
 }
 
 h1, h2{
