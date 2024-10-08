@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calories Calculator</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+        </style>
+        <script src="./main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <noscript>Your browser does not support JavaScript or it is disabled! Please enable it for functionality.</noscript>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="apricus.avif" type="image/x-icon">
+        <meta name="robots" content="noindex">
+    </head>
+    <body>
+      <img src="./apricus.avif">
+      <h1>Daily Calorie Requirement Calculator</h1>
+      <button class="button" onclick="toggleSystem()">Change to Metric Units</button>
+      <div class="us-type">
+        <form onsubmit="return usCalculate()">
+            <div>
+                <p>Age</p>
+                <input type="number" name="us-age" id="us-age" placeholder="Age" max="120" min="15" required>
+                <br>
+                <p>Gender</p>
+                <label><input type="radio" name="us-gender" id="us-man" checked> Male</label>
+                <label><input type="radio" name="us-gender" id="us-woman"> Female</label>
+            </div>
+            <div>
+                <p>Height (ft, in)</p>
+                <input type="number" name="us-height" id="us-ft" placeholder="ft" min="1" max="10" required>
+                <span>'</span>
+                <input type="number" name="us-height" id="us-in" placeholder="in" min="0" max="11" required step=".25">
+                <p>Weight (lb)</p>
+                <input type="number" name="us-weight" id="us-lb" min="1" max="2200" placeholder="lb" required step=".01">
+            </div>
+            <div>
+                <p>Activity</p>
+                <select name="us-activity" id="us-activity">
+                    <option value="none">A bit or no exercise</option>
+                    <option value="light">Exercise for 15-30min 1-3 times/week</option>
+                    <option value="moderate">Exercise for 15-30min 4-5 times/week</option>
+                    <option value="active">Intense exercise for 45-120min 6-7 times/week</option>
+                    <option value="extra">Very Intense excersice for 2h+ daily or physical job</option>
+                </select>
+            </div>
+            <button type="submit" class="submit">Calculate</button>
+        </form>
+      </div>
+      <div class="metric-type" style="display:none;">
+        <form onsubmit="return metricCalculate()">
+            <div>
+                <p>Age</p>
+                <input type="number" name="mt-age" id="mt-age" placeholder="Age" max="120" min="15" required>
+                <br>
+                <p>Gender</p>
+                <label><input type="radio" name="mt-gender" id="mt-man" checked> Male</label>
+                <label><input type="radio" name="mt-gender" id="mt-woman"> Female</label>
+            </div>
+            <div>
+                <p>Height (cm)</p>
+                <input type="number" name="mt-height" id="mt-cm" placeholder="cm" min="1" max="330" required step=".01">
+                <p>Weight (kg)</p>
+                <input type="number" name="mt-weight" id="mt-kg" min="1" max="1000" placeholder="kg" required step=".01">
+            </div>
+            <div>
+                <p>Activity</p>
+                <select name="mt-activity" id="mt-activity">
+                    <option value="none">A bit or no exercise</option>
+                    <option value="light">Exercise for 15-30min 1-3 times/week</option>
+                    <option value="moderate">Exercise for 15-30min 4-5 times/week</option>
+                    <option value="active">Intense exercise for 45-120min 6-7 times/week</option>
+                    <option value="extra">Very Intense excersice for 2h+ daily or physical job</option>
+                </select>
+            </div>
+            <button type="submit" class="submit">Calculate</button>
+        </form>
+      </div>
+      <div id="results" style="display:none;">
+        <h1></h1>
+        <p id="note"><i>(Your reccomended intake of calories is below the reccomended level of 1500. Please consult with a doctor if you decide to choose the reccomended calorie intake.)</i></p>
+        <br>
+        <p>If you're pregnant or breast-feeding, are a competitive athlete, or have a metabolic disease, such as diabetes, the calorie calculator may overestimate or underestimate your actual calorie needs.</p>
+      </div>
+    </body>
+</html>

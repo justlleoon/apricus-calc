@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HIIT Calculator</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+        </style>
+        <script src="./main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <noscript>Your browser does not support JavaScript or it is disabled! Please enable it for functionality.</noscript>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="apricus.avif" type="image/x-icon">
+        <meta name="robots" content="noindex">
+    </head>
+    <body>
+      <img src="./apricus.avif">
+      <h1 class="top">HIIT Calculator</h1>
+      <p class="top">Unit of measurment</p>
+      <select id="scale" onchange="changeSystem()">
+        <option value="one">Imperial System</option>
+        <option value="two">Metric System</option>
+      </select>
+      <form onsubmit="return calculate()">
+        <div>
+            <p>HIIT Workout Time (min)</p>
+            <input type="number" name="time" id="time" max="525600" min="1" placeholder="min" required>
+        </div>
+        <div id="div-weight">
+            <p>Your Weight (lb)</p>
+            <input type="number" name="weight" id="lb" max="2200" min="1" required placeholder="lb" step=".01">
+            <input type="number" name="weight" id="kg" max="1000" min="1" style="display:none" placeholder="kg" step=".01">
+        </div>
+        <button class="submit" type="submit">Calculate</button>
+      </form>
+      <div id="results" style="display:none;">
+        <h1></h1>
+      </div>
+    </body>
+</html>

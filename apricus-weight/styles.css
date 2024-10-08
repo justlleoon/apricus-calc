@@ -1,0 +1,112 @@
+body{
+    text-align: center;
+    font-family: "Nobile", sans-serif; 
+    background: linear-gradient(180deg, rgba(240, 244, 236, 1), rgba(241, 235, 226, 1) 100%); 
+    background-color: rgba(241, 235, 226, 1); background-repeat: no-repeat;
+}
+
+h1, h2{
+    font-family: "Glegoo", serif
+}
+
+img{
+    margin-bottom: -30px;
+}
+
+.button{
+    margin: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: rgb(221, 167, 29);
+    background-color: rgba(174, 54, 14, 1);
+    font-family: Nobile, sans-serif;
+    border: rgba(221, 167, 29, 0.6), 1px, solid;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    display: block;
+    width: fit-content;
+    margin: auto;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-decoration: none;
+}
+
+p{
+    margin-bottom: 1px;
+}
+
+#results{
+    color: white;
+    width: 100%;
+    border-radius: 2vh;
+    display: none;
+    padding-bottom: 5px;
+    padding-top: 30px;
+    margin-bottom: 15px;
+    justify-content: center;
+    flex-direction: column;
+    background-color: green;
+    /*margin-top: 30px;*/
+    margin: auto;
+}
+
+#results p{
+    margin-top: -20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+table{
+    border-collapse: collapse;
+    width: fit-content;
+    margin: auto;
+    border-spacing: 0;
+    display: table;
+    border: 1px solid #ccc;
+    color: black;
+}
+
+tr{
+    background-color: #ffffff;
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+thead tr{
+    background-color: #f2f2f2;
+}
+
+a{
+    color: rgba(255, 255, 255, 0.85);
+    text-underline-offset: .3rem;
+    text-decoration-thickness: .1rem;
+    transition: text-decoration-thickness ease .1s;
+}
+
+a:hover{
+    color: rgb(255, 255, 255);
+    text-decoration-thickness: .2rem;
+}
+
+td{
+    padding: 3px 6px;
+}
+
+#results h2{
+    margin: 0;
+}
+
+#results h1{
+    margin: 0;
+}
+
+h1{
+    margin-bottom: 0;
+}
+
+select{
+    margin-top: 10px;
+}

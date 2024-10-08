@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Body Fat Calculator</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+        </style>
+        <script src="./main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <noscript>Your browser does not support JavaScript or it is disabled! Please enable it for functionality.</noscript>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="apricus.avif" type="image/x-icon">
+        <meta name="robots" content="noindex">
+    </head>
+    <body>
+      <img src="./apricus.avif">
+      <h1>Body Fat Calculator</h1>
+      <button class="button" onclick="toggleSystem()" id="toggle">Change to Metric Units</button>
+      <form onsubmit="return calculate()">
+        <div>
+            <p>Gender</p>
+            <label><input type="radio" name="gender" id="male" checked> Male</label>
+            <label><input type="radio" name="gender" id="female"> Female</label>
+        </div>
+        <div>
+            <p>Age</p>
+            <input type="number" name="age" id="age" max="120" min="18" required placeholder="Age">
+        </div>
+        <div class="weight-container">
+            <p>Weight (lb)</p>
+            <input type="number" name="weight" id="lb" max="2200" required placeholder="lb">
+            <input type="number" name="weight" id="kg" style="display:none" placeholder="kg">
+        </div>
+        <div class="height-container">
+            <p>Height (ft, in)</p>
+            <div class="us-container">
+                <input type="number" name="us-height" id="ft" placeholder="ft" max="10" min="1" required>
+                <span>'</span>
+                <input type="number" name="us-height" id="in" placeholder="in" max="11" min="0" step=".25" required>
+            </div>
+            <input type="number" name="mt-height" id="cm" placeholder="cm" style="display:none" min="1" max="330">
+        </div>
+        <button type="submit" class="button">Calculate</button>
+      </form>
+      <div id="results">
+        <h1></h1>
+        <p></p>
+      </div>
+    </body>
+</html>
