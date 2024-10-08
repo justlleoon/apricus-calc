@@ -16,16 +16,25 @@
     </head>
     <body>
       <h1>Body Mass Index (BMI)</h1>
+      <p class="top">Unit of measurment</p>
+      <select id="scale" onchange="changeSystem()">
+        <option value="one">US System</option>
+        <option value="two">Metric System</option>
+      </select>
       <form onsubmit="return calculateBMI()">
         <div>
             <p>Height (ft, in)</p>
-            <input type="number" name="height" id="ft" placeholder="ft" min="0" max="10" required>
-            <span>'</span>
-            <input type="number" name="height" id="in" placeholder="in" min="0" max="11" required step=".25">
+            <div class="us-container">
+              <input type="number" name="height" id="ft" placeholder="ft" min="1" max="10" required>
+              <span>'</span>
+              <input type="number" name="height" id="in" placeholder="in" min="0" max="11" required step=".25">
+            </div>
+            <input type="number" name="mt-height" id="cm" placeholder="cm" min="1" max="1000" step=".5">
         </div>
         <div>
             <p>Weight (kg)</p>
-            <input type="number" name="weight" id="kg" min="0" max="1000" placeholder="kg" required step=".01">
+            <input type="number" name="weight" id="lb" min="0" max="1000" placeholder="lb" required step=".01">
+            <input type="number" name="weight" id="kg" min="0" max="1000" placeholder="kg" step=".01" style="display:none">
         </div>
         <button type="submit" class="button">Calculate</button>
       </form>

@@ -1,14 +1,24 @@
-
+let selectItem = 1;
 
 function calculateBMI() {
     var inchvalue = document.getElementById("in").value;
     var kilovalue = document.getElementById("kg").value;
     var footvalue = document.getElementById("ft").value;
+    var cmvalue = document.getElementById("cm").value;
+    var lbvalue = document.getElementById("lb").value;
     var inch = Number(inchvalue);
     var foot = Number(footvalue);
     var kilo = Number(kilovalue);
-    var height = foot * 12 + inch;
-    var meters = height / 39.37;
+    var cmNum = Number(cmvalue);
+    var lbNum = Number(lbvalue);
+    if (selectItem === 1) {
+        var height = foot * 12 + inch;
+        var meters = height / 39.37;
+    } else if (selectItem === 2) {
+        var meters = cmNum / 100;
+    } else {
+        console.log("Error!")
+    }
     var squaredheight = meters * meters;
     var result = kilo / squaredheight;
     var bmi = result.toFixed(2);
@@ -34,4 +44,35 @@ function calculateBMI() {
     $("#results h1").text(`Your BMI is ${bmi}.`)
     $("#results").slideDown()
     return false
+}
+
+function changeSystem() {
+    var selectTag = document.getElementById("scale").value;
+    if (selectTag === "two") {
+        $(".us-container").hide()
+        document.getElementById("ft").required = false;
+        document.getElementById("in").required = false;
+        document.getElementById("cm").required = true;
+        document.getElementById("kg").required = true;
+        document.getElementById("lb").required = false;
+        $("#lb").hide()
+        $("#kg").show()
+        $("#ft").hide()
+        $("#in").hide()
+        $("#cm").show()
+        selectItem = 2;
+    } else {
+        $(".us-container").show()
+        document.getElementById("ft").required = true;
+        document.getElementById("in").required = true;
+        document.getElementById("cm").required = false;
+        document.getElementById("kg").required = false;
+        document.getElementById("lb").required = true;
+        $("#lb").show()
+        $("#kg").hide()
+        $("#ft").show()
+        $("#in").show()
+        $("#cm").hide()
+        selectItem = 1;
+    }
 }
