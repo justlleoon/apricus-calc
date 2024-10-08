@@ -51,7 +51,6 @@ a{
     text-underline-offset: .3rem;
     text-decoration-thickness: .1rem;
     transition: text-decoration-thickness ease .1s;
-    font-weight: bold;
 }
 
 a:hover{
